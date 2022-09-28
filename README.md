@@ -12,5 +12,5 @@
 2.communication systems
 3.web design
 
-[Course reference] : (digital-electonics-2
+[Course reference](digital-electonics-2
 /fsm)
