@@ -11,3 +11,5 @@
 1.analog electronics
 2.communication systems
 3.web design
+
+[Course reference][https://www.vut.cz/en/students/courses/detail/258262]
