@@ -14,3 +14,8 @@
 
 [this](
 /HELLO.md)
+
+| Subject | Credits |
+| ------------- | ------------- |
+| digital-electronics-2 | 6  |
+
