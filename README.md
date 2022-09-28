@@ -12,4 +12,5 @@
 2.communication systems
 3.web design
 
-[Course reference] : (/LICENSE)
+[Course reference] : (digital-electonics-2
+/LICENSE)
