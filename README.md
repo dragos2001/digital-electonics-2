@@ -19,7 +19,7 @@
 | ------------- | ------------- |
 | digital-electronics-2 | 6  |
 
-```
+```c
 int main(void)
 {
   int n=10;
