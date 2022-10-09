@@ -15,6 +15,7 @@
                         // is connected
 #define LED_RED PB0     // External active-low LED
 #define SHORT_DELAY 250 // Delay in milliseconds
+
 #ifndef F_CPU
 # define F_CPU 16000000 // CPU frequency in Hz required for delay funcs
 #endif
@@ -23,7 +24,7 @@
 #include <avr/io.h>     // AVR device-specific IO definitions
 #include <util/delay.h> // Functions for busy-wait delay loops
 #include <gpio.h>
-#include<gpio.c>
+
 
 // -----
 // This part is needed to use Arduino functions but also physical pin
