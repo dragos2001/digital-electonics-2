@@ -19,9 +19,9 @@ More information about PlatformIO Unit Testing:
    | **DDRB** | **PORTB** | **Direction** | **Internal pull-up resistor** | **Description** |
    | :-: | :-: | :-: | :-: | :-- |
    | 0 | 0 | input | no | Tri-state, high-impedance |
-   | 0 | 1 | | | |
-   | 1 | 0 | | | |
-   | 1 | 1 | | | |
+   | 0 | 1 |input |yes |PINx source current |
+   | 1 | 0 |output | no | low level |
+   | 1 | 1 |output | no | high level |
 
 ### GPIO library
 
@@ -29,9 +29,9 @@ More information about PlatformIO Unit Testing:
 
    | **Version** | **Size [B]** |
    | :-- | :-: |
-   | Arduino-style     |  |
-   | Registers         |  |
-   | Library functions |  |
+   | Arduino-style     | 508  |
+   | Registers         | 182 |
+   | Library functions | 182 |
 
 ### Traffic light
 
