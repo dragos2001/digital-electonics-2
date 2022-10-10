@@ -39,3 +39,11 @@ More information about PlatformIO Unit Testing:
 
    ![your figure](https://github.com/dragos2001/digital-electonics-2/blob/main/lab2-gpio_library/traficlights.png)
 
+Resistances = 300 ohm (each)
+PB5 = greenled_pedestrians_pin (13)
+PB4 = btn_pin (12)
+PB3 = redled_pedestrians_pin (11)
+PB2 = greenled_cars_pin (10)
+PB1 = redled_cars_pin (9)
+PB0 = yellowled_cars_pin (8)
+
