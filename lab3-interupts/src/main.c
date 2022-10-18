@@ -15,7 +15,7 @@
 /* Defines -----------------------------------------------------------*/
 #define LED_GREEN PB5  // Arduino Uno on-board LED
 #define LED_RED PB0    // External active-low LED
-
+#define LED_BLUE PB3
 
 /* Includes ----------------------------------------------------------*/
 #include <avr/io.h>         // AVR device-specific IO definitions
@@ -36,6 +36,7 @@ int main(void)
     // Set pins where LEDs are connected as output
     GPIO_mode_output(&DDRB, LED_GREEN);
     GPIO_mode_output(&DDRB, LED_RED);
+    GPIO_mode_output(&DDRB, LED_BLUE);
     // Configuration of 16-bit Timer/Counter1 for LED blinking
     // Set the overflow prescaler to 262 ms and enable interrupt
     TIM1_overflow_1s();
@@ -43,6 +44,10 @@ int main(void)
 
     TIM0_overflow_16ms();
     TIM0_overflow_interrupt_enable();
+
+
+     TIM2_overflow_4ms();
+    TIM2_overflow_interrupt_enable();
     // Enables interrupts by setting the global interrupt mask
     sei();
 
@@ -66,6 +71,12 @@ int main(void)
 ISR(TIMER1_OVF_vect)
 {
     PORTB = PORTB ^ (1<<LED_GREEN);
+}
+
+ISR(TIMER2_OVF_vect)
+{
+    
+    PORTB = PORTB ^ (1<<LED_BLUE);
 }
 
 ISR(TIMER0_OVF_vect)
