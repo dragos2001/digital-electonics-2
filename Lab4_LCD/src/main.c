@@ -115,37 +115,42 @@ ISR(TIMER2_OVF_vect)
          
          no_of_overflows++;
 
-        if(minutes>59)
-        {
-          minutes=0;
-        }
         
-        if(seconds>59)
-        {
-          seconds=0;
-          minutes++;
-        }
-        if(tenths>9)
-        {
-             tenths=0;
-              seconds++;
-        }
+       
+        
+        
 
                if (no_of_overflows >= 6)
               {
                 // Do this every 6 x 16 ms = 100 ms
                 no_of_overflows = 0;
                 
-                // Count tenth of seconds 0, 1, ..., 9, 0, 1, ...
+              tenths++;
 
-                
+
+                if(tenths>9)
+                {
+                 tenths=0;
+                 seconds++;
+                }
+
+                if(seconds>59)
+                {
+                  seconds=0;
+                  minutes++;
+                }
+
+                if(minutes>59)
+                {
+                  minutes=0;
+                }
+
                 
                 itoa(tenths, string, 10);  // Convert decimal value to string
                 itoa(seconds,string_seconds,10); //
                 itoa(minutes,string_minutes,10);
 
-                tenths++;
-                lcd_gotoxy(1, 0);
+              
                 if(minutes<10)
                 {
                   lcd_gotoxy(1, 0);
@@ -160,18 +165,23 @@ ISR(TIMER2_OVF_vect)
                 }
                 if(seconds<10)
                 {
-                  lcd_gotoxy(4, 0);
+                  lcd_gotoxy(5, 0);
                   lcd_puts("0");
                   lcd_puts(string_seconds);
-                  lcd_puts(":");
+                  lcd_puts(".");
                 }
                 else{
-                  lcd_gotoxy(4, 0);
+                  lcd_gotoxy(5, 0);
                   lcd_puts(string_seconds);
-                  lcd_puts(":");
+                  lcd_puts(".");
                 }
-                lcd_gotoxy(7, 0);
+                lcd_gotoxy(8, 0);
                 lcd_puts(string);
+
+                // Count tenth of seconds 0, 1, ..., 9, 0, 1, ...
+
+                
+                
               }
 
           
