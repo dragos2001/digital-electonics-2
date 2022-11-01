@@ -34,4 +34,4 @@ Consider an application for temperature measurement. Use analog temperature sens
    ![your figure](https://github.com/dragos2001/digital-electonics-2/blob/main/lab5-Analog-to-Digital-Converter/temperature_measurement_scheme.png)
 
 3. Draw two flowcharts for interrupt handler `TIMER1_OVF_vect` (which overflows every 1&nbsp;sec) and `ADC_vect`. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
-   ![your figure]()
+   ![your figure](https://github.com/dragos2001/digital-electonics-2/blob/main/lab5-Analog-to-Digital-Converter/flow_chart.jpg)
