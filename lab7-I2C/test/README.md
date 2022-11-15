@@ -10,7 +10,7 @@
    * SPI pins
    * external interrupt pins INT0, INT1
 
-   ![your figure](images/pinout.png)
+   ![your figure](https://github.com/dragos2001/digital-electonics-2/blob/main/lab7-I2C/image/pinout.png)
 
 ### I2C communication
 
