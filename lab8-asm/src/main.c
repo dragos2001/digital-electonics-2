@@ -144,7 +144,7 @@ ISR(TIMER1_OVF_vect)
     // Transmit LFSR value via UART in decimal
     itoa(value,string,10);
     uart_puts(string);
-    uart_puts("");
+    uart_puts(" ");
 
 
     // Generate one LFSR value and increment number of generated LFSR values
